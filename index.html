@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">                      
+    <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Markdown Notes</title>
+    <script src="https://kit.fontawesome.com/7666dfc9fb.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.9/purify.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 7px;
+            background-color: white;
+        }
+        ::-webkit-scrollbar-thumb {
+            width: 5px;
+            height: 5px;
+            background-color: black;
+        }
+
+        ::scrollbar {
+            width: 5px;
+            height: 7px;
+            background-color: white;
+        }
+        ::scrollbar-thumb {
+            width: 5px;
+            height: 5px;
+            background-color: black;
+        }
+
+        ::-ms-scrollbar {
+            width: 5px;
+            height: 7px;
+            background-color: white;
+        }
+        ::-ms-scrollbar-thumb {
+            width: 5px;
+            height: 5px;
+            background-color: black;
+        }
+
+        ::-moz-scrollbar {
+            width: 5px;
+            height: 7px;
+            background-color: white;
+        }
+        ::-moz-scrollbar-thumb {
+            width: 5px;
+            height: 5px;
+            background-color: black;
+        }
+
+        html.dark ::-moz-scrollbar {
+            width: 5px;
+            background-color: #181817;
+        }
+        html.dark ::-moz-scrollbar-thumb {
+            width: 5px;
+            background-color: white;
+        }
+
+        html.dark ::-ms-scrollbar {
+            width: 5px;
+            background-color: #181817;
+        }
+        html.dark ::-ms-scrollbar-thumb {
+            width: 5px;
+            background-color: white;
+        }
+
+        html.dark ::-webkit-scrollbar {
+            width: 5px;
+            background-color: #181817;
+        }
+        html.dark ::-webkit-scrollbar-thumb {
+            width: 5px;
+            background-color: white;
+        }
+
+        html.dark ::scrollbar {
+            width: 5px;
+            background-color: #181817;
+        }
+        html.dark ::scrollbar-thumb {
+            width: 5px;
+            background-color: white;
+        }
+
+        html {
+            font-family: "Montserrat", sans-serif;
+        }
+        .preview h1{
+            font-size: 2.125rem;
+        }
+        .preview h2{
+            font-size: 1.875rem;
+        }
+        .preview h3 {
+            font-size: 1.5rem;
+        }
+        .preview h4 {
+            font-size: 1.25rem;
+        }
+        .preview h5 {
+            font-size: 1.125rem;
+        }
+        .preview h6 {
+            font-size: 1rem;
+        }
+
+    </style>
+</head>                            
+<body class="bg-[#F2EEE6] dark:bg-[#282828] transition-all"> 
+   <section class="mx-auto dark:bg-[#141516]">
+
+    <div class="ml-3 flex items-center justify-between gap-[1rem] dark:text-white text-black mx-2">
+
+        <h1 class="text-[1.3rem] md:text-[2rem] lg:text-[2.2rem]">Markdown Editor</h1>
+        <div>
+            <input type="checkbox" name="checkbox" id="check" class="appearance-none cursor-pointer">
+            <label for="check" class="cursor-pointer">Light Theme</label>
+        </div>
+    </div>
+   </section>
+   <section class="flex items-center justify-between gap-[.3rem] mt-1 h-[93vh] dark:bg-[#282828]">
+       <textarea name="markdownInput" id="markdownInput" class="w-1/2 min-h-full h-max p-1 outline-none rounded-[6px] resize-none dark:bg-[#181817] dark:text-white" placeholder="Markdown Here..."></textarea>
+        <div class="preview w-1/2 rounded-[4px] p-1 h-full bg-white dark:bg-[#181817] dark:text-white overflow-y-scroll"></div>
+   </section>
+   <script src="main.js"></script>
+</body>
+</html>
